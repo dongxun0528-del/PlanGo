@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        // 加上这一行
+        maven { url 'https://developer.huawei.com/repo/' }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        // 加上这一行
+        maven { url 'https://developer.huawei.com/repo/' }
+    }
+}
+
+rootProject.name = "PlanGo"
+include ':mobile'
+include ':wear'
